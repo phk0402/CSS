@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+
+    /* animation-name : 적용하고 싶은 애니메이션의 이름을 지정 */
+      animation-name: box_ani;
+
+    /* animation-duration : 애니메이션 움직임 지속 시간 */
+      animation-duration: 1s;
+
+    /* animation-iteration-count : 애니메이션 반복 횟수 */
+      animation-iteration-count: 3;
+    
+      /* animation-direction : 애니메이션 방향 */
+      animation-direction: alternate;
+    
+      /* animation-delay : 애니메이션 지연시간 */
+      animation-delay: 2s;
+
+    /* animation-timing-function : 애니메이션 가속도 */
+      animation-timing-function: linear;
+      
+    /* animation-fill-mode : 애니메이션 끝난 후의 상태 */
+      animation-fill-mode: forwards;
+    }
+
+    /* @keyframes : 애니메이션 움직임 제어 */
+    @keyframes box_ani {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 200px;
+      }
+    }
+    </style>
+
+</head>
+<body>
+  <div class="box">
+  </div>
+</body>
+</html>
