@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example transform</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .con-wrap {
+      width: 450px;
+      margin: 100px auto;
+      border: 1px solid #d7d7d7;
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+    .con-wrap:hover img {
+      transform: scale(1.1);
+    }
+
+    .img-wrap{
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      transition-duration: 0.3s;
+    }
+
+    .con-wrap h3{
+      font-size: 26px;
+      font-weight: 900;
+      margin: 15px 0 5px 0;
+    }
+
+    .con-wrap p{
+      font-weight: 100;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="con-wrap">
+    <div class="img-wrap">
+      <img src="../img/img.png" alt="이미지">
+    </div>
+    <h3>프론트 엔드 개발자 되고 싶다구요~~</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam ex rerum libero tenetur placeat maxime! Ut amet consectetur illum magnam est earum dolor? Expedita numquam sed sapiente tempore dignissimos!</p>
+  </div>
+
+</body>
+</html>
