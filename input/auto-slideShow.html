@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/auto-slideshow.css">
+  <title>Auto SlideShow</title>
+</head>
+<body>
+  <!-- transform : translateX();
+      라벨을 클릭하면 input이 체크되면서 화면전환되는 효과를 위해 사용 -->
+  <!-- left
+      @keyframes으로 진행도에 따라 화면전환되는 애니메이션을 위해 사용 -->
+
+    <div class="slidebox">
+      <input type="radio" name="slide" id="slide01" checked>
+      <input type="radio" name="slide" id="slide02">
+      <input type="radio" name="slide" id="slide03">
+      <input type="radio" name="slide" id="slide04">
+
+      <ul class="slideList">
+        <li class="slideItem">
+          <div>
+            <label for="slide04" class="left"></label>
+            <label for="slide02" class="right"></label>
+            <a><img src="./img/img-slide01.jpg"></a>
+          </div>
+        </li>
+        <li class="slideItem">
+          <div>
+            <label for="slide01" class="left"></label>
+            <label for="slide03" class="right"></label>
+            <a><img src="./img/img-slide02.jpg"></a>
+          </div>
+        </li>
+        <li class="slideItem">
+          <div>
+            <label for="slide02" class="left"></label>
+            <label for="slide04" class="right"></label>
+            <a><img src="./img/img-slide03.jpg"></a>
+          </div>
+        </li>
+        <li class="slideItem">
+          <div>
+            <label for="slide03" class="left"></label>
+            <label for="slide01" class="right"></label>
+            <a><img src="./img/img-slide04.jpg"></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+</body>
+</html>

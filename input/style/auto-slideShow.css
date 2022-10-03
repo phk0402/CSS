@@ -1,0 +1,133 @@
+@charset "UTf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+[name = "slide"] {
+  display: none;
+}
+
+.slidebox {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slidebox img {
+  max-width: 100%;
+}
+
+.slidebox .slideList {
+ white-space: nowrap;
+ font-size: 0;
+ overflow: hidden;
+}
+
+.slidebox .slideItem {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all .35s;
+}
+
+.slidebox .slideItem label {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+label.left {
+  left: 20px;
+  background-color: #d7d7d7;
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+label.left:after {
+  content: "<";
+}
+
+label.right {
+  right: 20px;
+  color: #333;
+  background-color: #d7d7d7;
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+label.right:after {
+  content: ">";
+}
+
+/* 자동 슬라이드 이동 */
+[id="slide01"]:checked ~ .slideList .slideItem {transform: translateX(0); animation: slide01 20s infinite;}
+[id="slide02"]:checked ~ .slideList .slideItem {transform: translateX(-100%); animation: slide02 20s infinite;}
+[id="slide03"]:checked ~ .slideList .slideItem {transform: translateX(-200%); animation: slide03 20s infinite;}
+[id="slide04"]:checked ~ .slideList .slideItem {transform: translateX(-300%); animation: slide04 20s infinite;}
+
+@keyframes slide01 {
+  0% {left: 0%;}
+  23% {left: 0%;}
+  25% {left: -100%;}
+  48% {left: -100%;}
+  50% {left: -200%;}
+  73% {left: -200%;}
+  75% {left: -300%;}
+  98% {left: -300%;}
+  100% {left: 0%;}
+}
+
+@keyframes slide02 {
+  0% {left: 0%;}
+  23% {left: 0%;}
+  25% {left: -100%;}
+  48% {left: -100%;}
+  50% {left: -200%;}
+  73% {left: -200%;}
+  75% {left: 100%;}
+  98% {left: 100%;}
+  100% {left: 0%;}
+}
+
+@keyframes slide03 {
+  0% {left: 0%;}
+  23% {left: 0%;}
+  25% {left: -100%;}
+  48% {left: -100%;}
+  50% {left: 200%;}
+  73% {left: 200%;}
+  75% {left: 100%;}
+  98% {left: 100%;}
+  100% {left: 0%;}
+}
+
+@keyframes slide04 {
+  0% {left: 0%;}
+  23% {left: 0%;}
+  25% {left: 300%;}
+  48% {left: 300%;}
+  50% {left: 200%;}
+  73% {left: 200%;}
+  75% {left: 100%;}
+  98% {left: 100%;}
+  100% {left: 0%;}
+}
